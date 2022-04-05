@@ -1,0 +1,87 @@
+@import 'config';
+
+@mixin mainFont($weight, $size) {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color-desaturated;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+}
+
+.hero-image {
+  background-image: $bg-desktop;
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: cover;
+  border: 1px solid yellow;
+}
+
+.container {
+  display: flex;
+
+  .left-side {
+    flex: 6;
+    border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+    
+    header {
+      border: 2px solid yellow;
+      padding: 40px 145px;
+    }
+
+    main {
+      //border: 2px solid blue;
+      @include mainFont($font-medium, 14px);
+      text-align: left;
+      padding: 145px 250px 145px 145px;
+
+      p {
+        line-height: 1.8;
+        padding: 20px 0;
+      }
+
+      h1 {
+        color: $color-neutral;
+        font-size: 4rem;
+        font-weight: $font-medium;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        line-height: 1.1;
+        word-spacing: 9999px;
+      }
+
+      .heading-span {
+        color: $color-desaturated;
+        font-weight: $font-light;
+        
+      }
+
+  
+    }
+  }
+
+  .right-side {
+    flex:5;
+
+    .hero-image {
+      min-height:100vh;
+      width: auto;
+    }
+  }
+
+
+}
+
+
+.email-arrow-icon {
+}
